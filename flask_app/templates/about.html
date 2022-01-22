@@ -1,6 +1,57 @@
 {% extends "base.html" %}
 {% block title %}Flask App{% endblock %}
 {% block body %}
-    this is about
+    <!-- this is about -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About</title>
+    </head>
+    <body>
+        <div class="top-0 w-full h-12"></div>
+        <div class="flex items-center flex-col bg-gray-300 h-full"> 
+
+            <!-- about dataset -->
+            <div class="w-[60%] mt-4 p-2 flex items-leff  flex-col rounded-md bg-gray-400">
+                <h1 class="text-2xl" >About Dataset</h1>
+                <ul class="list-inside list-disc">
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ul>
+            </div>
+
+            <!-- parting line -->
+            <div class="w-[60%] h-[2px] my-5 bg-slate-800 rounded-full"></div>
+
+            <!-- about site -->
+            <div class="w-[60%] p-2 mb-4 flex items-left  flex-col rounded-md bg-gray-400">
+                <h1 class="text-2xl" >About Site</h1>
+                <p class="m-1 p1">This is a website that detects financial fraud using dataset mentioned above.</p> 
+                <p class="m-1 p1">To check whether a thransaction is fraud / not fraud:</p>
+                <ol class="list-inside list-decimal">
+                    <strong>
+                        <li class="ml-10">User has to input only the 'Transaction Id' of a particular transaction, then</li>
+                        <li class="ml-10">Sit back effortlessly</li>
+                    </strong>
+                </ol>
+                <p class="m-1 p1">Rest will be handeled by our Artifical Intelligence Model ..</p>
+                <p class="m-1 p1">Model then prins a Report showing:</p>
+                <ul class="list-inside list-disc">
+                    <li class="ml-10" >Perdiction (Fraud / Not Fraud)</li>
+                    <li class="ml-10" >Balance</li>
+                    <li class="ml-10" >Amount debited</li>
+                    <li class="ml-10" >old balance</li>
+                    <li class="ml-10" >namedestination</li>
+                </ul>
+            </div>
+
+        </div>
+    </body>
+    </html>
 {% endblock %}
 
