@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block title %}Flask App{% endblock %}
 {% block body %}
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+<div class="w-full h-[90vh] flex flex-col justify-center items-center">
+    <div class="
                 h-auto w-96 bg-[#e0e0e0] text-white text-opacity-70 rounded-3xl 
                 flex justify-center py-10
                 neuro-flat">
@@ -14,7 +15,7 @@
                 <p class="text-slate-600 font-semibold -translate-x-1">Transaction ID</p>
                 <input 
                 type="text" name="transaction_id" placeholder="C905080434"
-                class="bg-[#d5d5d5] text-slate-800 
+                class="bg-[#d1d1d1] text-slate-800 
                     px-4 py-2 rounded-lg
                     focus:outline-none"
                 >
@@ -23,9 +24,20 @@
                 type="submit"  value="Submit"
                 class="h-12 w-auto px-4 
                     rounded-lg drop-shadow-xl
-                    bg-slate-800"
+                    bg-slate-800 text-[#e0e0e0]"
             >
         </form>
+
     </div>
+    <div>
+        {% if prediction %}
+            {% if prediction[0]==1 %}
+                <div>Fraud detected</div>
+            {% else %}
+                <div>No fraud detected</div>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
 {% endblock %}
 

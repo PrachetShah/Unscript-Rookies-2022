@@ -24,11 +24,13 @@ def home():
         if request.form["transaction_id"] == "":
             flash(" Please enter a name ", "info")
             return render_template("home.html")
-        id = request.form["transaction_id"]
-        row = df.loc[df['nameOrig']==int(id[1:])]
-        prediction = model.predict([list(row.iloc[0,[1,2,3,4,5,7,8]])])
         
-        print( prediction[0] )
+        id = request.form["transaction_id"]
+        
+        row = df.loc[df['nameOrig']==int(id[1:])]
+        
+        prediction = model.predict([list(row.iloc[0,[1,2,3,4,5,7,8]])])
+        print( prediction )
         return render_template("home.html", row=row, prediction=prediction)
     else:
         return render_template("home.html")

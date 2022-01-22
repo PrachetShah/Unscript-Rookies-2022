@@ -1,21 +1,13 @@
 {% extends "base.html" %}
 {% block title %}Flask App{% endblock %}
 {% block body %}
-    <!-- this is about -->
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About</title>
-    </head>
-    <body>
+
+    <div>
         <div class="top-0 w-full h-12"></div>
         <div class="flex items-center flex-col bg-gray-300 h-full"> 
 
             <!-- about dataset -->
-            <div class="w-[60%] mt-4 p-2 flex items-leff  flex-col rounded-md bg-gray-400">
+            <div class="w-[60%] mt-4 p-2 flex flex-col rounded-md bg-slate-800 text-[#e0e0e0] py-10 px-20">
                 <h1 class="text-2xl" >About Dataset</h1>
                 <p class="m-1 p1">
                     > Fraud detection data set is a csv file consisting of various transaction details.
@@ -57,7 +49,7 @@
             <div class="w-[60%] h-[2px] my-5 bg-slate-800 rounded-full"></div>
 
             <!-- about site -->
-            <div class="w-[60%] p-2 mb-4 flex items-left  flex-col rounded-md bg-gray-400">
+            <div class="w-[60%] p-2 mb-4 flex items-left  flex-col rounded-md bg-slate-800 text-[#e0e0e0] px-20 py-10">
                 <h1 class="text-2xl" >About Site</h1>
                 <p class="m-1 p1">This is a website that detects financial fraud using dataset mentioned above.</p> 
                 <p class="m-1 p1">To check whether a thransaction is fraud / not fraud:</p>
@@ -77,9 +69,7 @@
                     <li class="ml-10" >namedestination</li>
                 </ul>
             </div>
-
         </div>
-    </body>
-    </html>
+    </div>
 {% endblock %}
 
