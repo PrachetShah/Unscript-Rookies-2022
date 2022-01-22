@@ -2,14 +2,25 @@
 {% block title %}Flask App{% endblock %}
 {% block body %}
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-                h-[30rem] w-96 bg-[rgba(0,0,0,0.3)] text-white text-opacity-70 rounded-3xl 
-                flex justify-center">
-        <form action="submit">
+                h-[30rem] w-96 bg-[#e0e0e0] text-white text-opacity-70 rounded-3xl 
+                flex justify-center py-10
+                neuro-flat">
+        <form 
+            action="#" method="POST"
+            class="flex flex-col items-center h-auto w-full
+                space-y-5"
+        >
             <input 
             type="text" name="transaction_id" placeholder="transaction ID"
-            class="bg-transparent"
+            class="border-b-2 border-gray-600 bg-transparent
+                text-slate-800"
             >
-            button
+            <input 
+                type="submit"  value="Submit"
+                class="h-12 w-auto px-4 
+                    rounded-lg drop-shadow-xl
+                    bg-slate-800"
+            >
         </form>
     </div>
 {% endblock %}

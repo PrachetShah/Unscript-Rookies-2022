@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %} {% endblock %}</title>
   <script src="https://cdn.tailwindcss.com/"></script>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
 </head>
 <!-- Background -->
 <!-- #3f1c4c #202640 #08445e -->
 <div
-  class="-z-10 fixed top-0 left-0 h-full w-full bg-gradient-to-br from-fuchsia-800 via-blue-800 to-black"
+  class="-z-10 fixed top-0 left-0 h-full w-full bg-[#e0e0e0]"
 ></div>
 <!-- Header -->
 <div class="z-10 fixed top-0 w-full h-12 bg-black text-white flex items-center justify-between px-5">
