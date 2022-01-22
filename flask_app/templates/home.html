@@ -2,7 +2,7 @@
 {% block title %}Flask App{% endblock %}
 {% block body %}
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-                h-[30rem] w-96 bg-[#e0e0e0] text-white text-opacity-70 rounded-3xl 
+                h-auto w-96 bg-[#e0e0e0] text-white text-opacity-70 rounded-3xl 
                 flex justify-center py-10
                 neuro-flat">
         <form 
@@ -10,11 +10,15 @@
             class="flex flex-col items-center h-auto w-full
                 space-y-5"
         >
-            <input 
-            type="text" name="transaction_id" placeholder="transaction ID"
-            class="border-b-2 border-gray-600 bg-transparent
-                text-slate-800"
-            >
+            <div class="space-y-2">
+                <p class="text-slate-600 font-semibold -translate-x-1">Transaction ID</p>
+                <input 
+                type="text" name="transaction_id" placeholder="C905080434"
+                class="bg-[#d5d5d5] text-slate-800 
+                    px-4 py-2 rounded-lg
+                    focus:outline-none"
+                >
+            </div>
             <input 
                 type="submit"  value="Submit"
                 class="h-12 w-auto px-4 
