@@ -19,11 +19,14 @@ drive link
 Decision Tree Classifier
 
 ## 5. Reason for selecting Decision Tree:
-*   Decision Tree Classifier showed the highest recall, accuracyy and F1 score when compared to others.
+## 6. Reason for selecting Decision Tree:
+*   Decision Tree Classifier showed the highest recall, accuracyy and F1 score when compared to others:
+*   Recall - 99.1799 % | Acc - 99.124 % | f1 - 99.108 %
+*   **Rejecting other networks because:**
 *   Neural Networks are rejected because it obviously takes a LOT of training time & computation power
 *   Performance of other models that were tested are:
  _______________________________________________
-| Model               |    Recall   |   F1      |
+| Model               |  Recall(%)  |  F1(%)    |
 |---------------------|-------------|-----------|
 | Logistic Regression |   85.721    |   88.7021 |
 | SVM                 |   84.02     |   88      |
