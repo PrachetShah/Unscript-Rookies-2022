@@ -31,7 +31,7 @@ def home():
         
         prediction = model.predict([list(row.iloc[0,[1,2,3,4,5,7,8]])])
         print( prediction )
-        return render_template("home.html", row=row, prediction=prediction)
+        return render_template("home.html", row=list(row.values.tolist()), prediction=prediction)
     else:
         return render_template("home.html")
     

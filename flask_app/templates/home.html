@@ -32,9 +32,36 @@
     <div>
         {% if prediction %}
             {% if prediction[0]==1 %}
-                <div>Fraud detected</div>
+                <div class="pt-5">Fraud detected</div>
+                <table class="min-w-full border-collapse block md:table">
+                    <thead class="block md:table-header-group">
+                        <tr class="border border-grey-500 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto  md:relative ">
+                            <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Type</th>
+                            <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Amount</th>
+                            <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Name Origin</th>
+                            <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Old Balance Orig</th>
+                            <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">New Balance Orig</th>
+                            <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Name Destination</th>
+                            <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Old Balance Dest</th>
+                            <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">New Balance Dest</th>
+                        </tr>
+                    </thead>
+                    <tbody class="block md:table-row-group">
+                        <tr class="bg-gray-300 border border-grey-500 md:border-none block md:table-row">
+                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Type</span>Jamal Rios</td>
+                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Amount</span>jrios1</td>
+                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Name Origin</span>jrios@icloud.com</td>
+                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Old Balance Orig</span>582-3X2-6233</td>
+                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">New Balance Orig</span>582-3X2-6233</td>
+                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Name Destination</span>582-3X2-6233</td>
+                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">Old Balance Dest</span>582-3X2-6233</td>
+                            <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span class="inline-block w-1/3 md:hidden font-bold">New Balance Dest</span>582-3X2-6233</td>
+                        </tr>
+                    </tbody>
+                </table>
             {% else %}
-                <div>No fraud detected</div>
+                <div class="pt-5">Fraud not detected</div>
+                <div class="pt-2"></div>
             {% endif %}
         {% endif %}
     </div>
