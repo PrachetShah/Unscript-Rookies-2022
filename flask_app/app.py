@@ -1,6 +1,4 @@
 from flask import Flask, render_template, flash, redirect, request, url_for
-from datetime import timedelta
-from markupsafe import escape
 import pandas as pd
 import pickle
 
@@ -27,11 +25,21 @@ def home():
         
         id = request.form["transaction_id"]
         
-        row = df.loc[df['nameOrig']==int(id[1:])]
-        
-        prediction = model.predict([list(row.iloc[0,[1,2,3,4,5,7,8]])])
-        print( prediction )
-        return render_template("home.html", row=list(row.values.tolist()), prediction=prediction)
+        try:
+            if id[0].lower() != 'c':
+                raise ValueError
+            row = df.loc[df['nameOrig']==int(id[1:])]
+        except ValueError:
+            return render_template("home.html", error="Enter valid Transaction ID")
+        if row.shape[0] == 0:
+            return render_template("home.html", prediction=0)
+        else:
+            feature_list = list(row.iloc[0,[1,2,3,4,5,7,8]])
+            name_list = list(row.iloc[:,[1,2,3,4,5,7,8]])
+            prediction = model.predict([feature_list])
+            print(feature_list)
+            print( prediction[0] )
+            return render_template("home.html", row=zip(name_list, feature_list), prediction=prediction[0])
     else:
         return render_template("home.html")
 
@@ -42,4 +50,4 @@ def about():
 
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run()

@@ -1,20 +1,23 @@
 {% extends "base.html" %}
 {% block title %}Flask App{% endblock %}
 {% block body %}
+{% if error %}
+    <div class="fixed left-1/2 -translate-x-1/2 top-20 p-5 bg-slate-800 text-[#e0e0e0] rounded-lg">{{error}}</div>
+{% endif %}
 <div class="w-full h-[90vh] flex flex-col justify-center items-center">
     <div class="
                 h-auto w-96 bg-[#e0e0e0] text-white text-opacity-70 rounded-3xl 
-                flex justify-center py-10
-                neuro-flat">
+                flex justify-center items-center py-10
+                neuro-flat my-10">
         <form 
             action="#" method="POST"
             class="flex flex-col items-center h-auto w-full
-                space-y-5"
+                space-y-8"
         >
             <div class="space-y-2">
                 <p class="text-slate-600 font-semibold -translate-x-1">Transaction ID</p>
                 <input 
-                type="text" name="transaction_id" placeholder="C905080434"
+                type="text" name="transaction_id" placeholder="C512549200"
                 class="bg-[#d1d1d1] text-slate-800 
                     px-4 py-2 rounded-lg
                     focus:outline-none"
@@ -22,44 +25,39 @@
             </div>
             <input 
                 type="submit"  value="Submit"
-                class="h-12 w-auto px-4 
-                    rounded-lg drop-shadow-xl
+                class="h-12 w-auto px-5 font-semibold 
+                    rounded-lg shadow-xl hover:bg-[#afafaf] hover:text-slate-800 duration-300 transition-colors
                     bg-slate-800 text-[#e0e0e0]"
             >
         </form>
 
     </div>
-    <div>
-    {% if prediction %}
+    <div class="flex flex-col items-center">
+    {% if True %}
+        {% if row %}
         <div class="w-auto h-auto my-5 py-4 px-10
                 flex justify-between items-center
                 space-x-10 bg-[#e0e0e0] neuro-flat font-semibold
                 border-[3px] border-[#d5d5d5] rounded-xl">
-            {% for i in range(7): %}
+            {% for i in row %}
             <div class="flex flex-col space-y-4">
-                <p class="text-slate-600">Title</p>
-                <p class="text-slate-800 font-bold">Item</p>
+                <p class="text-slate-600">{{i[0]}}</p>
+                <p class="text-slate-800 font-bold">{{i[1]}}</p>
             </div>
             {% endfor %}
+        {% endif %} 
         </div>
-            {% if prediction[0]==1 %}
-                <div class="pt-5">Fraud detected</div>
-            {% else %}
-                <div class="pt-5">Fraud not detected</div>
+            {% if prediction==1 %}
+            <div class="mt-5 px-10 py-5 bg-slate-700 rounded-lg
+            text-[#e0e0e0] shadow-lg"
+            >Fraud detected</div>
+            {% elif prediction==0 %}
+                <div class="mt-5 px-10 py-5 bg-slate-700 rounded-lg
+                            text-[#e0e0e0] shadow-lg"
+                >Fraud not detected</div>
                 <div class="pt-2"></div>
             {% endif %}
     {% endif %}
-        <!-- <div class="w-auto h-auto my-5 py-4 px-10
-                    flex justify-between items-center
-                    space-x-10 bg-[#e0e0e0] neuro-flat font-semibold
-                    border-[3px] border-[#d5d5d5] rounded-xl">
-            {% for i in range(7): %}
-            <div class="flex flex-col space-y-4">
-                <p class="text-slate-600">Title</p>
-                <p class="text-slate-800 font-bold">Item</p>
-            </div>
-            {% endfor %}
-        </div> -->
     </div>
 </div>
 {% endblock %}
