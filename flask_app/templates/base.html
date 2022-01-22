@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %} {% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com/"></script>
+</head>
+<!-- Background -->
+<!-- #3f1c4c #202640 #08445e -->
+<div
+  class="-z-10 fixed top-0 left-0 h-full w-full bg-gradient-to-br from-fuchsia-800 via-blue-800 to-black"
+></div>
+<!-- Header -->
+<div class="z-10 fixed top-0 w-full h-12 bg-black text-white flex items-center justify-between px-5">
+  <p>Website</p>
+  <div class="flex space-x-5">
+    <p>item</p>
+    <p>item</p>
+    <p>item</p>
+    <p>item</p>
+  </div>
+
+</div>
+<body>
+  {% block body %} {% endblock %}
+</body>
+</html>
