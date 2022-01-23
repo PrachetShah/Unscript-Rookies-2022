@@ -43,9 +43,10 @@ insights to create an actionable plan. The case's data is stored in a CSV file w
 | Kernel SVM          |   81.478    |   87.06    |
 -------------------------------------------------
 
-## 7. Challenges fased:
+## 7. Challenges faced:
 *   Data Analysis
 *   Input for model 
 *   Probemes in deployment due to data size
 
-## 8. Deployed at: 
+## 8. How to run it locally:
+
