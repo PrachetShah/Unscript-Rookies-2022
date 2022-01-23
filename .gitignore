@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/flask
 # Edit at https://www.toptal.com/developers/gitignore?templates=flask
 
+### Big Dataset ###
+model/fraud_data_final.csv
+
 ### Flask ###
 instance/*
 !instance/.gitignore

@@ -9,7 +9,7 @@ insights to create an actionable plan. The case's data is stored in a CSV file w
 6362620 rows and 10 columns.
 
 ## 2. Dataset link: 
-[Data Location](https://drive.google.com/file/d/12EEXQ8B_p-62ArFWd5ZyCK7fWhD-BRup/view?usp=sharing)
+* [Data Location](https://drive.google.com/file/d/12EEXQ8B_p-62ArFWd5ZyCK7fWhD-BRup/view?usp=sharing)
 
 ## 3. Tools, Libraries & Softwares used:
 * pandas, matplotlib, numpy for Data Exploration and Cleaning
@@ -25,7 +25,7 @@ insights to create an actionable plan. The case's data is stored in a CSV file w
     which we trained our model on and got a 99% Recall and 99% F1-Score metrics on our data.
 
 ## 5. ML model used : 
-Decision Tree Classifier
+* Decision Tree Classifier
 
 ## 6. Reason for selecting Decision Tree:
 *   Decision Tree Classifier showed the highest recall, accuracyy and F1 score when compared to others:

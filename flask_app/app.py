@@ -7,13 +7,9 @@ app.jinja_env.auto_reload = True
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.secret_key = "password"
 
-df1 = pd.read_csv("model\\fraud_data1_1_1.csv")
-df2 = pd.read_csv("model\\fraud_data1_1_2.csv")
-df3 = pd.read_csv("model\\fraud_data2.csv")
+df = pd.read_csv("model\\fraud_data_final.csv")
 
-df = pd.concat([df1,df2,df3])
-
-with open('model\\fraud_model.bin', 'rb') as f_in:
+with open('model\\fraud_model_final.bin', 'rb') as f_in:
     model = pickle.load(f_in)
 
 @app.route('/', methods=["POST", "GET"])
@@ -33,12 +29,13 @@ def home():
             return render_template("home.html", error="Enter valid Transaction ID")
         if row.shape[0] == 0:
             return render_template("home.html", prediction=0)
+        
         else:
-            feature_list = list(row.iloc[0,[1,2,3,4,5,7,8]])
-            name_list = list(row.iloc[:,[1,2,3,4,5,7,8]])
+            feature_list = list(row.iloc[0,[1,2,3,4,5,6,7]])
+            name_list = list(row.iloc[:,[1,2,3,4,5,6,7]])
             prediction = model.predict([feature_list])
             print(feature_list)
-            print( prediction[0] )
+            print( prediction)
             return render_template("home.html", row=zip(name_list, feature_list), prediction=prediction[0])
     else:
         return render_template("home.html")
