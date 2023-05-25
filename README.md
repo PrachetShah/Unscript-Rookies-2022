@@ -21,7 +21,7 @@ insights to create an actionable plan. The case's data is stored in a CSV file w
 ## 4. Our analysis on data and solution to some of imbalance
 *   We found that 3 types of transactions had 0 Fraud Cases so we decided to neglect them from training and created certain conditions to judge if 
     their transactions are Fraud or not which are explained in our Data Exploration Notebook 
-*   Dataset was completely unbalanced so we decided to randomly select our data based on 1:1 ration of Fraudulent and non-Fraudulent Data from our dataset
+*   Dataset was completely imbalanced so we decided to randomly select our data based on 1:1 ration of Fraudulent and non-Fraudulent Data from our dataset
     which we trained our model on and got a 99% Recall and 99% F1-Score metrics on our data.
 
 ## 5. ML model used : 
