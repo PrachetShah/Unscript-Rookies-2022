@@ -46,7 +46,7 @@ insights to create an actionable plan. The case's data is stored in a CSV file w
 ## 7. Challenges faced:
 *   Data Analysis
 *   Input for model 
-*   Probemes in deployment due to data size
+*   Problems in deployment due to data size
 
 ## 8. How to run it locally:
 
